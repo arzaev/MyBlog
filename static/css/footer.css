@@ -1,0 +1,18 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+
+footer
+{
+    font-family: Raleway;
+    margin: 0 auto;
+	padding: 5em 3em;
+	text-align: center;
+    background: #f1f1f1;
+}
+
+
+footer span
+{
+  color: #AAA;
+}
+
