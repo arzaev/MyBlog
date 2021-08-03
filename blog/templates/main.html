@@ -7,10 +7,10 @@
   <ul class="box-article">
     <li class="list-article wow flipInY">
 	{% for article in article_list %}
-      <article class="box-article"><a href="">
+      <article class="box-article"><a href="/{{article.id}}/">
           <h1>{{article.article_title}}</h1>
           <figure><img src="{{article.article_header_image_url}}" alt=""/></figure>
-          <p>Sweet roll lemon drops chupa chups. Candy canes icing soufflé ice cream tiramisu jelly-o macaroon sweet roll chocolate cake. Cake bear claw gummies topping candy canes liquorice muffin halvah.</p></a></article>
+          <p>{{article.article_description}}</p></a></article>
 	{% endfor %}
     </li>
     <li class="list-article wow flipInY" data-wow-delay="0.3s">

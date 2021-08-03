@@ -1,6 +1,7 @@
 from datetime import datetime
 from django.db import models
 from django.urls import reverse
+from tinymce import models as tm
 
 # Create your models here.
 
@@ -18,7 +19,7 @@ class Article(models.Model):
 	article_header_image_url = models.CharField(max_length=255)
 	article_description = models.TextField()
 	article_title = models.CharField(max_length=255)
-	article_content = models.TextField()
+	article_content = tm.HTMLField()
 	article_published = models.DateTimeField("date publiched", default=datetime.now())
 	article_slug = models.SlugField(max_length=255, unique=True)
 	article_category = models.ManyToManyField(Category)
