@@ -59,3 +59,19 @@
 .social i#youtube:hover {
   color: red;
 }
+
+.menu {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu li {
+      display: inline;
+      margin-right: .2em;
+}
+
+.menu li:hover a {
+  color: #24cf5f;
+}
+
+

@@ -49,7 +49,7 @@ a {
   width: 100%;
 }
 .layout-article ul.box-article li article figure img {
-  width: 100%;
+  width: 80%;
 }
 .layout-article ul.box-article li article p {
   margin-top: 15px;
@@ -88,11 +88,3 @@ a {
   }
 }
 
-.credit {
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  width: 150px;
-  height: 100px;
-  background: url(http://tlab.co.id/images/logo.png) no-repeat center center;
-}

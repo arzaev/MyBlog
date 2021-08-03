@@ -1,68 +1,42 @@
 {% extends 'index.html' %}
 
+
+
+
+
 {% block content %}
+
+	<div class="container">
+	  <div class="row justify-content-md-center">
+		<div class="col-md-8 header">
+			{% include 'header.html' %}
+			
+			<ul class="menu"> 
+{% for category in categories %}
+<li>
+<a href="/category/{{category.id}}" class="link-secondary" title="Home page">{{category.category_name}}</a>
+</li>
+{% endfor %}
+</ul>
+		</div>
+	  </div>
+	</div>
 
 
 <section class="layout-article">
   <ul class="box-article">
-    <li class="list-article wow flipInY">
 	{% for article in article_list %}
+    <li class="list-article wow flipInY">
       <article class="box-article"><a href="/{{article.id}}/">
           <h1>{{article.article_title}}</h1>
           <figure><img src="{{article.article_header_image_url}}" alt=""/></figure>
           <p>{{article.article_description}}</p></a></article>
+    </li>
 	{% endfor %}
-    </li>
-    <li class="list-article wow flipInY" data-wow-delay="0.3s">
-      <article class="box-article"><a href="">
-          <h1>Gummies fruitcake cupcake candy tart</h1>
-          <figure><img src="https://images.unsplash.com/photo-1441906363162-903afd0d3d52?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;s=51953479f1ce3812d6fc2bc7d82ecea4" alt=""/></figure>
-          <p>Sweet roll lemon drops chupa chups. Candy canes icing soufflé ice cream tiramisu jelly-o macaroon sweet roll chocolate cake. Cake bear claw gummies topping candy canes liquorice muffin halvah.</p></a></article>
-    </li>
-    <li class="list-article wow flipInY" data-wow-delay="0.6s">
-      <article class="box-article"><a href="">
-          <h1>Gummies fruitcake cupcake candy tart sesame snaps apple.</h1>
-          <figure><img src="https://images.unsplash.com/photo-1443527216320-7e744084f5a7?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;s=6fbde3ee76bc8f49caf14c89778b2210" alt=""/></figure>
-          <p>Sweet roll lemon drops chupa chups. Candy canes icing soufflé ice cream tiramisu jelly-o macaroon sweet roll chocolate cake. Cake bear claw gummies topping candy canes liquorice muffin halvah.</p></a></article>
-    </li>
-    <li class="list-article wow flipInY" data-wow-delay="0.9s">
-      <article class="box-article"><a href="">
-          <h1>Gummies fruitcake cupcake</h1>
-          <p>Sweet roll lemon drops chupa chups. Candy canes icing soufflé ice cream tiramisu jelly-o macaroon sweet roll chocolate cake. Cake bear claw gummies topping candy canes liquorice muffin halvah.</p></a></article>
-    </li>
-    <li class="list-article wow flipInY" data-wow-delay="1.2s">
-      <article class="box-article"><a href="">
-          <h1>Cake apple pie candy canes liquorice.</h1>
-          <p>Sweet roll lemon drops chupa chups. Candy canes icing soufflé ice cream tiramisu jelly-o macaroon sweet roll chocolate cake. Cake bear claw gummies topping candy canes liquorice muffin halvah.</p></a></article>
-    </li>
-    <li class="list-article wow flipInY" data-wow-delay="1.5s">
-      <article class="box-article"><a href="">
-          <h1>Gummies fruitcake cupcake candy tart sesame snaps apple pie</h1>
-          <figure><img src="https://images.unsplash.com/photo-1440470177828-6381dc5074ba?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;s=6faf705d60f9804d03079755fb323a9a" alt=""/></figure>
-          <p>Sweet roll lemon drops chupa chups. Candy canes icing soufflé ice cream tiramisu jelly-o macaroon sweet roll chocolate cake. Cake bear claw gummies topping candy canes liquorice muffin halvah.</p></a></article>
-    </li>
   </ul>
-</section><a class="credit" href="http://tlab.co.id/" target="_blank"></a>
-<script>
-new WOW().init();
-</script>
+</section>
 
-<nav data-pagination>
-  <a href=# disabled><i class=ion-chevron-left></i></a>
-  <ul>
-    <li class=current><a href=#1>1</a>
-    <li><a href=#2>2</a>
-    <li><a href=#3>3</a>
-    <li><a href=#4>4</a>
-    <li><a href=#5>5</a>
-    <li><a href=#6>6</a>
-    <li><a href=#7>7</a>
-    <li><a href=#8>8</a>
-    <li><a href=#9>9</a>
-    <li><a href=#10>…</a>
-    <li><a href=#41>41</a>
-  </ul>
-  <a href=#2><i class=ion-chevron-right></i></a>
-</nav>
+{% include 'pagination.html' %}
+
 
 {% endblock content %}

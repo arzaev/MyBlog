@@ -50,6 +50,7 @@
 }
 [data-pagination] li.current {
   background: rgba(0, 0, 0, 0.1);
+  padding: 0.2em;
 }
 /* Disabled & Hidden Styles */
 [data-pagination] .disabled,

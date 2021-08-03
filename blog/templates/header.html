@@ -1,11 +1,4 @@
 {% load static %}
 <img class="me shadow-sm rounded" src="{% static 'images/face.jpg' %}" alt="" />
 
-<div class="social">
-  <a href=""><i id="twitter" class="icon-twitter"></i></a>
-  <i id="github" class="icon-github"></i>
-  <i id="stack" class="icon-stackexchange"></i>
-  <i id="code" class="icon-code"></i>
-  <i id="mail" class="icon-envelope"></i> 
-  <i id="youtube" class="icon-youtube"></i> 
-</div>
+{% include 'social.html' %}
